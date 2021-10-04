@@ -2,5 +2,11 @@ This is a compilation of the LeetCode problems I have solved, with stats about d
 
 The current list of problems solved:
 
-3
-231
+* 1
+* 3
+* 219
+* 231
+* 344
+* 509
+* 1763
+* 1876
