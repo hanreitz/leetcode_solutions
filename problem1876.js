@@ -1,6 +1,6 @@
 // original submission
 // 80 ms (faster than 74.85%); 40.5 MB (less than 56.44%)
-const countGoodSubstrings = s => {
+const countGoodSubstrings = s =>{
   const length = 3
   let numberOfGoods = 0
   
