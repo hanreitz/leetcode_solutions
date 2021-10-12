@@ -14,3 +14,19 @@ var canBeIncreasing = function(nums) {
   // if it repeats or can't be sorted with a single value removed, return false
   return false
 };
+
+// better solution - represents how this type of problem should be structured
+
+var canBeIncreasing = function(nums) {
+  let counter = 0;
+  let test = [3,4,1,5,7]
+  for(let i = 1; i < nums.length && counter < 2; i++){
+      if(nums[i] <= nums[i - 1]){
+          counter++
+          if(nums[i] <= nums[i - 2]){
+              nums[i] = nums[i - 1]
+          }
+      }
+  }
+  return counter < 2
+};
