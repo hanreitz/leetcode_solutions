@@ -11,6 +11,7 @@ var reverseString = function(s) {
 };
 
 // a much better solution with two-pointer approach!
+// 104 ms (faster than 80.15%); 46 MB (less than 57.71%)
 
 var reverseString = function(s) {
   let start = 0;
