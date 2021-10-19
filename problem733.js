@@ -41,3 +41,20 @@ var floodFill = function(image, sr, sc, newColor) {
   
   return image
 };
+
+// working solution using recursion
+
+var floodFill = function(image, sr, sc, newColor, oldColor = image[sr][sc]) {
+  if(typeof image[sr] === 'undefined' || typeof image[0][sc] === 'undefined' || image[sr][sc] !== oldColor || image[sr][sc] === newColor) {
+      return image
+  }
+
+  image[sr][sc] = newColor
+
+  floodFill(image, sr + 1, sc, newColor, oldColor)
+  floodFill(image, sr - 1, sc, newColor, oldColor)
+  floodFill(image, sr, sc + 1, newColor, oldColor)
+  floodFill(image, sr, sc - 1, newColor, oldColor)
+
+  return image
+};
