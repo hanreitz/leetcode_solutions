@@ -1,3 +1,5 @@
+// binary search solution
+
 const findInRow = (finalRow, target) => {
   while(finalRow.length > 1){
       let fL = Math.floor((finalRow.length) / 2)
@@ -22,3 +24,15 @@ var searchMatrix = function(matrix, target) {
   
   return findInRow(toSearch[0], target)
 };
+
+// brute force solution
+
+var searchMatrix = function(matrix, target){
+  for(let i = 0; i < matrix.length; i++){
+      for(const j of matrix[i]){
+          if(j === target) return true
+      }
+  }
+  
+  return false
+}
